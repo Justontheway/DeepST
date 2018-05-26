@@ -68,6 +68,8 @@ def build_model(external_dim):
     model.summary()
     # from keras.utils.visualize_util import plot
     # plot(model, to_file='model.png', show_shapes=True)
+    from keras.utils.vis_utils import plot_model as plot
+    plot(model, to_file='model.png', show_shapes=True)
     return model
 
 
@@ -146,4 +148,5 @@ def main():
           (score[0], score[1], score[1] * (mmn._max - mmn._min) / 2. * m_factor))
 
 if __name__ == '__main__':
-    main()
+    #main()
+    build_model(8)
